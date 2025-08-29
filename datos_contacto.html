@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Investigación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f9f9f9;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      background-color: #fff;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      box-sizing: border-box;
+    }
+    .checkbox-group,
+    .radio-group {
+      margin-top: 0.5em;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      display: inline-block;
+      margin-right: 1em;
+    }
+    .buttons {
+      margin-top: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Datos de contacto para investigación</legend>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="titulo">Nombre de la investigación propuesta:</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="descripcion">Describa su investigación:</label>
+      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+      <label>Área de conocimiento:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="area[]" value="vision"> Manejo de la computadora</label>
+        <label><input type="checkbox" name="area[]" value="ml">Melodramas y planeacion de sets </label>
+        <label><input type="checkbox" name="area[]" value="geneticos">Taller de tecnologias en el ambito del modelaje</label>
+      </div>
+
+      <label>Nivel de investigación:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="nivel" value="maestria" checked>Licenciatura en contaduria</label>
+        <label><input type="radio" name="nivel" value="doctorado"> Curso de modelaje</label>
+        <label><input type="radio" name="nivel" value="postdoc"> Nivel medio superior en actuacion,modelaje y tecnologia</label>
+      </div>
+
+      <label for="archivo">Adjuntar archivo:</label>
+      <input type="file" id="archivo" name="archivo">
+
+      <div class="buttons">
+        <button type="submit">Enviar</button>
+      </div>
+    </fieldset>
+  </form>
+
+</body>
+</html>
